@@ -16,7 +16,6 @@ public class UserDaoImpl implements UserDao{
     private EntityManager entityManager;
 
     @Override
-    @SuppressWarnings("unchecked")
     public List<User> getAllUsers() {
         Query query = entityManager.createNativeQuery("select * from users", User.class);
         List<User> list = query.getResultList();
